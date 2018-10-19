@@ -1,0 +1,26 @@
+Due to the recent success of the code-a-thon, the ACM room is always crowded! In accordance with
+fire code regulations, only so many people can be in the room at once. People waiting to get in
+have formed a single file line. Help the ACM bouncer Clay to reorganize the line into a perfect
+square.
+
+Input Format
+The first line will be a single integer n which is the length of the line
+n is between 0 and 100
+The second line will be an n length line of students represented by their year and separated by 
+spaces
+1 for freshmen, 2 for sophmore, 3 for junior, 4 for senior, 5 for graduate student
+  
+Output Format
+The new square shaped line with the students year in the correct position separated with ','
+The line should snake around. See the example output for reference.
+Empty spaces at the end of the line should be represented with 0
+
+Example
+Input
+8 
+1 4 3 2 5 4 3 1
+
+Output
+1, 4, 3, 
+4, 5, 2,
+3, 1, 0,
