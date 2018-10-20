@@ -6,6 +6,7 @@ ensure_solution () {
 	case $1 in
 		*.java) printf "cd solutions; java $(javac -verbose $1 2>&1| tail -2 | head -1 | sed 's#.*solutions/\(.*\)\.class.*#\1#')";;
 		*.c) gcc $solution -o solutions/solution; printf "solutions/solution";;
+		*.hs) ghc $solution -o solutions/haskell_solution -outputdir=/tmp > /dev/null; printf "solutions/haskell_solution";;
 		*) printf "%s" "$1";;
 	esac
 }
