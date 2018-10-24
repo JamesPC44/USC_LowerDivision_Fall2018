@@ -44,7 +44,9 @@ public class coldwarSolution
         { 
             // Getting value of symbol s[i] 
             int s1 = value(str.charAt(i)); 
+            res = res + s1; 
 
+            /*
             // Getting value of symbol s[i+1] 
             if (i+1 <str.length()) 
             { 
@@ -62,15 +64,15 @@ public class coldwarSolution
                     res = res + s2 - s1; 
                     i++; // Value of current symbol is 
                     // less than the next symbol 
-                } 
+                }
             } 
             else
             { 
                 res = res + s1; 
                 i++; 
-            } 
+            }
+            */ 
         } 
-  
         return res; 
     }
 
