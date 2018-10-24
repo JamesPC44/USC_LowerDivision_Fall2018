@@ -110,11 +110,7 @@ public class coldwarSolution
             }
         }
 
-
-
-
-
-        System.out.println("Total number infected between " + x + " and " + y + " is "  + total);
+        System.out.println("Total amount of uranium between zones " + x + " and " + y + " is "  + total);
 	}
 }
 
