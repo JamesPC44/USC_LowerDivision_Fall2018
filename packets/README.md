@@ -32,7 +32,7 @@ Where:
 * $m$ is the number of packets in message $i$, a real positive integer
 * $c$ is the number of words in the message, a real positive integer
 * $k_1, k_2, \dots k_c$ are each strings which do not contain whitespace
-  characters
+  characters.
 
   * Every $k$ will match the regular expression `[-a-zA-Z0-9_]+`
 
@@ -41,8 +41,52 @@ message ID may be missing. Some packets may be delivered more than once.
 
 You may assume the following bounds:
 
-* $0\leq i \leq 2^{31}$
-* $0\leq n \leq 2^{31}$
-* $0\leq m \leq 2^{31}$
+* $0\leq i \leq 2^{16}$
+* $0\leq n \leq 2^{16}$
+* $0\leq m \leq 2^{16}$
 * $0\leq c \leq 2^{8}$
 * $0\leq N \leq 2^{16}$
+* The total number of words in a single message will not exceed $2^16$
+
+# Output Format
+
+You will provide the re-constituted message for each message ID, one message
+per line. Messages will be output in descending alphabetic order.  Any messages
+which are incomplete should be dropped.
+
+# Examples
+
+## Example 1
+
+Input:
+
+```
+0 0 2 3 this is an
+0 1 2 2 example message
+```
+
+Output:
+
+```
+this is an example message
+```
+
+## Example 2
+
+Input:
+
+```
+0 0 1 2 duplicated message
+1 0 2 2 incomplete message
+0 0 1 2 duplicated message
+2 2 3 1 order
+2 1 3 1 of
+2 0 3 1 out
+```
+
+Output:
+
+```
+duplicated message
+out of order
+```
