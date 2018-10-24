@@ -79,21 +79,40 @@ public class coldwarSolution
 	public static void main(String[] args) throws Exception {
 		
 		coldwarSolution ob = new coldwarSolution();
+        //initializing variables
+		Vector<Integer> valueVector = new Vector<Integer>();
+        int total = 0;
+		int x;
+        int y;
 
-		Vector<Integer> yearVector = new Vector<Integer>();
-		Vector<Integer> deathVector = new Vector <Integer>();
-		
-		String year;
-		String death;
-
+        //reading in file
 		File file = new File("Data");
 		Scanner sc = new Scanner(file);
+        //populate vector with the data
 		while (sc.hasNext()){
-			//year = sc.hasNext();
-
-			System.out.println(ob.romanToDecimal(sc.next()));
+			valueVector.add(ob.romanToDecimal(sc.next()));
 		}
+        //printing data (values are odd, years are even)
+        for( int i = 0; i < valueVector.size(); i++ ){
+            System.out.println(valueVector.get(i));
+        }
+        //getting the year range values
+        x = valueVector.get(valueVector.size() - 2);
+        y = valueVector.get(valueVector.size() - 1);
 
+        //count by two to get all of the dates
+        for( int i = 1; i < valueVector.size() - 2; i += 2 ){
+            if( (x <= (valueVector.get(i))) && ((valueVector.get(i)) <= y) ) { 
+                //subtract one to get the value behind it
+                total = total + valueVector.get(i - 1); 
+            }
+        }
+
+
+
+
+
+        System.out.println("Total number infected between " + x + " and " + y + " is "  + total);
 	}
 }
 

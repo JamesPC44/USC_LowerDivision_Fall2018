@@ -5,6 +5,9 @@ Ever since you signed up for the October hackathon with ACM, you’ve had a spoo
 
 Luckily, ACM has been able to decipher their numbering system. Your job is to transcribe the data, and let us know the sum of how many soldiers were infected between (x,y) years. <br>
 
+
+The numbering schema is of additive nature. The values are indicated below:
+
 C = 1 <br>
 O = 5 <br>
 L = 10 <br>
@@ -14,33 +17,32 @@ A = 500 <br>
 R = 1000 <br>
 
 Format of input: <br>
-n <br>
 t a <br>
 t a <br>
 t a <br>
 x y <br>
 
-Where n is the number of inputs, t is the number infected, and a is the year
+Where t is the number infected, and a is the year
 x is the first year, and y is the last year for in which need to be summed
 
 Constraints: <br>
-0 <= n <= 100 <br>
 0 <= t <= 1,000,000 <br>
 0 < a <= 1,000,000 <br>
 
 A sample input: <br>
-OC <br>
-OCD DOC <br>
+RRRRRWWWDL RRWL <br>
 RAW DCA <br>
 ORC LDW <br>
 OCA CRL <br>
 
+A sample output:
+"There were z deaths between x and y"
+
 Input: <br>
-N sets (year,deaths) <br>
-Sum (YearOne, YearTwo) <br>
+(year,deaths) <br>
+(YearOne, YearTwo) <br>
 
 Output: <br>
-Converted N sets (Year,deaths) <br>
 Total deaths between (yearOne,yearTwo) <br>
 
 
