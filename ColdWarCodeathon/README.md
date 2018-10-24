@@ -33,18 +33,18 @@ Constraints: <br>
 
 A sample input: <br>
 ~~~~
-WORRLD WARR 
-COLDWAR WARR 
-WARCOLD WAR 
-RRAW RRAWC
-WAOLRD WOARDL 
-WRRAAARR LRRA 
-RWAOLDA WROLA 
-RRA RRAWLCC
+WORRLD LDC
+COLDWAR CCL
+WARCOLD DO
+RRAW OOC
+WAOLRD OOO
+WRRAAARR LOC
+RWAOLDA LLR
+L DC
 ~~~~
 A sample output:
 ~~~~
-Total amount of uranium between zones 2500 and 2612 is 12031
+Total amount of uranium between zones 10 and 51 is 11531
 ~~~~
 
 

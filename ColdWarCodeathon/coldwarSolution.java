@@ -7,7 +7,7 @@
 * https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 *
 */
-import java.io.FileNotFoundException; 
+
 import java.util.*;
 import java.io.*;
 
@@ -45,33 +45,6 @@ public class coldwarSolution
             // Getting value of symbol s[i] 
             int s1 = value(str.charAt(i)); 
             res = res + s1; 
-
-            /*
-            // Getting value of symbol s[i+1] 
-            if (i+1 <str.length()) 
-            { 
-                int s2 = value(str.charAt(i+1)); 
-  
-                // Comparing both values 
-                if (s1 >= s2) 
-                { 
-                    // Value of current symbol is greater 
-                    // or equalto the next symbol 
-                    res = res + s1; 
-                } 
-                else
-                { 
-                    res = res + s2 - s1; 
-                    i++; // Value of current symbol is 
-                    // less than the next symbol 
-                }
-            } 
-            else
-            { 
-                res = res + s1; 
-                i++; 
-            }
-            */ 
         } 
         return res; 
     }
@@ -88,16 +61,20 @@ public class coldwarSolution
         int y;
 
         //reading in file
-		File file = new File("Data");
-		Scanner sc = new Scanner(file);
+		//File file = new File("./input/test0Input.txt");
+		Scanner sc = new Scanner(System.in);
         //populate vector with the data
 		while (sc.hasNext()){
 			valueVector.add(ob.romanToDecimal(sc.next()));
 		}
+        
+        /*
         //printing data (values are odd, years are even)
         for( int i = 0; i < valueVector.size(); i++ ){
             System.out.println(valueVector.get(i));
         }
+        */
+
         //getting the year range values
         x = valueVector.get(valueVector.size() - 2);
         y = valueVector.get(valueVector.size() - 1);
