@@ -16,7 +16,7 @@ You will write a program to count the number of people's hands (Harry will only 
 *R*
 *{R1, R2, ..., Rn}*
 
-###Where: 
+### Where: 
 
 *N* = Length of Harry's Arms.
 *P* = Columns of the Grid
@@ -33,10 +33,20 @@ You will print the number of hands that Harry will shake. If there are extra spa
 
 ### 1
 ```
-1
+3
 5
 5
-25
+12
+H_PPPP___PSP
 ```
-This will output `X`.
+This will output `4`.
 
+### 2
+```
+6
+9
+6
+30
+_S_SP__PSS_SPSPPPPS_P_SHSS_P__
+```
+This will output `9`.
