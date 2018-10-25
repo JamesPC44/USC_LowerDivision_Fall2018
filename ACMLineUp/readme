@@ -5,7 +5,7 @@ square.
 
 Input Format
 The first line will be a single integer n which is the length of the line
-n is between 0 and 100
+n is between 1 and 100
 The second line will be an n length line of students represented by their year and separated by 
 spaces
 1 for freshmen, 2 for sophmore, 3 for junior, 4 for senior, 5 for graduate student
@@ -17,10 +17,10 @@ Empty spaces at the end of the line should be represented with 0
 
 Example
 Input
-8 
-1 4 3 2 5 4 3 1
+8
+1 4 3 2 5 4 3 1 
 
 Output
-1, 4, 3, 
-4, 5, 2,
-3, 1, 0,
+1,4,3,
+4,5,2,
+3,1,0,
