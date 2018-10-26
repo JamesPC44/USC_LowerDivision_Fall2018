@@ -27,7 +27,7 @@ You will write a program to count the number of people's hands (Harry will only 
 
 ## Output
 
-You will print the number of hands that Harry will shake. If there are extra spaces in the grid at the end, represent them as "_".
+You will print the number of hands that Harry will shake. If there are extra spaces in the grid at the end, represent them as "_". They are empty Spaces.
 
 ## Examples
 
