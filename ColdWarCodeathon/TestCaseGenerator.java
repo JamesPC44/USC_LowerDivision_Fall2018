@@ -3,10 +3,13 @@ import java.lang.*;
 import java.util.Random;
 
 public class TestCaseGenerator{
-	
 
-	//public String buildString()
-
+    public static void generateAnswer(String inputFilename, String outputFilename) throws java.io.IOException {
+        ProcessBuilder builder = new ProcessBuilder("java", "coldwarSolution");
+        builder.redirectInput(new File(inputFilename));
+        builder.redirectOutput(new File(outputFilename));
+        builder.start();
+    }
 
 	public static void main(String[]args) throws IOException {
 		int letter;
@@ -16,8 +19,6 @@ public class TestCaseGenerator{
 		String inFile = "";
 		String outFile = "";
 		Random rand = new Random();
-		ProcessBuilder builder;
-		Process p;
 		for(int i = 1; i < 30; i++){
 			try
 			{
@@ -58,8 +59,7 @@ public class TestCaseGenerator{
 				}
 
 				input.close();
-				builder = new ProcessBuilder("java", "coldwarSolution", "<", inFile, ">", outFile);
-				p = builder.start();
+                generateAnswer(inFile, outFile);
 			}
 			catch (Throwable t)
 			{
