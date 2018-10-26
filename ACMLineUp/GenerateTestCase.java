@@ -4,6 +4,14 @@ import java.util.Random;
 
 public class GenerateTestCase 
 {
+	public static void generateCase(String input, String output) throws IOException
+	{
+		ProcessBuilder builder = new ProcessBuilder("java", "ACMLineUp");
+		builder.redirectInput(new File(input));
+		builder.redirectOutput(new File(output));
+		builder.start();
+	}
+
 	public static void main(String[]args) throws IOException 
 	{
 		int len;
@@ -12,7 +20,6 @@ public class GenerateTestCase
 		String outFile = "";
 		Random rand = new Random();
 		ProcessBuilder builder;
-		Process p;
 		for(int i = 1; i < 20; i++)
 		{
 			try
@@ -26,8 +33,7 @@ public class GenerateTestCase
 					line += (rand.nextInt(5) + 1) + " ";
 				input.println(line);
 				input.close();
-				builder = new ProcessBuilder("java", "ACMLineUp", "<", inFile, ">", outFile);
-				p = builder.start();
+				generateCase(inFile, outFile);
 			}
 			catch (Throwable t)
 			{
