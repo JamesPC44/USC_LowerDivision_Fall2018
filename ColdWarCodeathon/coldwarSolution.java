@@ -59,8 +59,7 @@ public class coldwarSolution
         int y;
         //reading in file
         //System.out.println("stuck");
-		File file = new File("./input/test1Input.txt");
-		Scanner reader = new Scanner(file);
+		Scanner reader = new Scanner(System.in);
         //System.out.println("stuck1");
         //populate vector with the data
 		while (reader.hasNext()){
