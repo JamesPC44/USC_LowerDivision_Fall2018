@@ -48,10 +48,8 @@ public class coldwarSolution
         } 
         return res; 
     }
-
-
 	//driver method
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 		
 		coldwarSolution ob = new coldwarSolution();
         //initializing variables
@@ -59,15 +57,17 @@ public class coldwarSolution
         int total = 0;
 		int x;
         int y;
-
         //reading in file
-		//File file = new File("./input/test0Input.txt");
-		Scanner sc = new Scanner(System.in);
+        //System.out.println("stuck");
+		File file = new File("./input/test1Input.txt");
+		Scanner reader = new Scanner(file);
+        //System.out.println("stuck1");
         //populate vector with the data
-		while (sc.hasNext()){
-			valueVector.add(ob.romanToDecimal(sc.next()));
+		while (reader.hasNext()){
+            //System.out.println("stuck2");
+			valueVector.add(ob.romanToDecimal(reader.next()));
 		}
-        
+        reader.close();
         /*
         //printing data (values are odd, years are even)
         for( int i = 0; i < valueVector.size(); i++ ){
@@ -86,7 +86,6 @@ public class coldwarSolution
                 total = total + valueVector.get(i - 1); 
             }
         }
-
         System.out.println("Total amount of uranium between zones " + x + " and " + y + " is "  + total);
 	}
 }

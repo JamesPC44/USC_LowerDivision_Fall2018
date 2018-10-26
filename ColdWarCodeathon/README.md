@@ -1,8 +1,7 @@
 
 Ever since you signed up for the October hackathon with ACM, you’ve had a spooky feeling that Halloween wasn’t going to be the same this year. While at last weeks meeting, you stumbled across an old file that had somehow gotten onto your computer. You decide to read the spooky.txt file. <br>
 
-*Sir, these files contain the amount of enriched uranium we have been able to produce. I have indicated the amount, followed by the zone number for each factory. 
- I went ahead and encoded them using our cold war system.* <br>
+*These files contain the amount of enriched uranium we have been able to produce. I have indicated the amount, followed by the zone number for each factory. I went ahead and encoded them using our cold war system.* <br>
 
 Luckily, ACM has been able to decipher their numbering system. Your job is to transcribe the data, and let us know the amount of enriched uranium the anonynous suspect claims to have between certain zones. <br>
 
