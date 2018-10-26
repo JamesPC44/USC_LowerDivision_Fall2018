@@ -24,16 +24,18 @@ public class GenerateTestCase
 		{
 			try
 			{
+				line = "";
 				inFile = String.format("./input/test%dInput.txt", i);
 				outFile = String.format("./output/test%dOutput.txt", i);
 				PrintWriter input = new PrintWriter(new BufferedWriter(new FileWriter(inFile)));
-				len = rand.nextInt(101) + 1;
+				len = rand.nextInt(100) + 1;
 				input.println(len);
 				for(int j = 0; j < len; j++)
 					line += (rand.nextInt(5) + 1) + " ";
 				input.println(line);
 				input.close();
 				generateCase(inFile, outFile);
+				//System.out.println(String.format("length: %d\nstring length: %d", len, line.replaceAll("\\s+","").length()));
 			}
 			catch (Throwable t)
 			{
